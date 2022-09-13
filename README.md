@@ -5,7 +5,7 @@ Minesweeper game on C#
 
 1. Go to Win10exe folder
 2. Open "setup.exe" or "sapjor.application"
-Readme#How to play
+
 ## 2. Description
 
 It's a Minesweeper game, inspired by classic Minesweeper game from WinXP.<br>
