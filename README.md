@@ -1,5 +1,5 @@
 # SV_Minesweeper
-Minesweeper game on C#
+🎮 Minesweeper game on C#
 
 ## 1. Installation
 
