@@ -203,11 +203,15 @@ namespace sapjor
         {
             try
             {
-                if (dataGridView1.Rows[y].Cells[x].Style.BackColor == Color.Empty)
+                if (dataGridView1.Rows[y].Cells[x].Style.BackColor == Color.Empty || dataGridView1.Rows[y].Cells[x].Style.BackColor == Color.Blue)
                 {
                     all_cells_count = all_cells_count - 1;
                     try
                     {
+                        if (dataGridView1.Rows[y].Cells[x].Style.BackColor == Color.Blue)
+                        {
+                            label6.Text = (Convert.ToInt32(label6.Text) + 1).ToString();
+                        }
                         if (mines_around(x, y) == 0)
                         {
                             dataGridView1.Rows[y].Cells[x].Style.BackColor = Color.LightGray;
@@ -215,13 +219,14 @@ namespace sapjor
                         }
                         else
                         {
-                            dataGridView1.Rows[y].Cells[x].Style.BackColor = Color.Green;
-                            //display mines count and points
-                            int mines_around_cell = mines_around(x, y);
-                            result_points = result_points + mines_around_cell; // points = mines count nearby
-                            dataGridView1.Rows[y].Cells[x].Value = mines_around_cell;
-                            label5.Text = result_points.ToString();
+                               dataGridView1.Rows[y].Cells[x].Style.BackColor = Color.Green;
+                               //display mines count and points
+                               int mines_around_cell = mines_around(x, y);
+                               result_points = result_points + mines_around_cell; // points = mines count nearby
+                               dataGridView1.Rows[y].Cells[x].Value = mines_around_cell;
+                               label5.Text = result_points.ToString();                             
                         }
+                        
                         if (all_cells_count == 0)
                         {
                             game_win();
@@ -229,7 +234,7 @@ namespace sapjor
                         else { }
                     }
                     catch { }
-                }
+                }                
                 else
                 {
                     //cell already was pressed                 
@@ -401,8 +406,7 @@ namespace sapjor
                     mark_mine(cord[0], cord[1]);
                 }
                 else
-                {
-                    MessageBox.Show("all cels" + all_cells.Count().ToString());
+                {                           
                     // cell already green
                 }
             }
