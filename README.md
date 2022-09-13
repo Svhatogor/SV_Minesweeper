@@ -9,7 +9,7 @@ Minesweeper game on C#
 ## 2. Description
 
 It's a Minesweeper game, inspired by classic Minesweeper game from WinXP.<br>
-Since there is no minesweeper on win10, i made my own for myself
+A long ago, i had no internet and since there is no minesweeper on win10, i made my own for myself, becouse o was bored
 
 ### How to play
 Select field size and mines count.
